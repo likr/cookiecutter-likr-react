@@ -1,0 +1,10 @@
+{
+  "full_name": "Your Name",
+  "email": "you@example.com",
+  "github_username": "username",
+  "repo_name": "repo_name",
+  "project_name": "Your App",
+  "project_short_description": "Description of your app.",
+  "year": "2017",
+  "dev_port": "8080"
+}
