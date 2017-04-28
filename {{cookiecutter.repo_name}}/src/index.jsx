@@ -1,11 +1,14 @@
 import 'babel-polyfill'
 import React from 'react'
 import {render} from 'react-dom'
-import {Router, Route, browserHistory} from 'react-router'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 import {Root} from './pages/root/index'
 
 render((
-  <Router history={browserHistory}>
+  <Router>
     <Route path='/' component={Root} />
   </Router>
-  ), document.getElementById('content'))
+), document.getElementById('content'))

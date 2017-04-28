@@ -5,7 +5,7 @@ const options = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'src')
         ],
@@ -31,6 +31,9 @@ const options = {
   },
   plugins: [
   ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
