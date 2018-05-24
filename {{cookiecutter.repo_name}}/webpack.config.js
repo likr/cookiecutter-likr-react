@@ -5,7 +5,7 @@ const options = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         include: [
           path.resolve(__dirname, 'src')
         ],
@@ -27,13 +27,8 @@ const options = {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].js'
   },
-  externals: {
-  },
   plugins: [
   ],
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
@@ -41,13 +36,7 @@ const options = {
   }
 }
 
-if (process.env.NODE_ENV === 'production') {
-  options.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    }
-  }))
-} else {
+if (process.env.NODE_ENV !== 'production') {
   Object.assign(options, {
     devtool: 'inline-source-map'
   })
